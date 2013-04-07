@@ -12,17 +12,14 @@ Vagrant.configure("2") do |config|
 
   config.vm.define :web1 do |web|
     web.vm.network "192.168.1.12"
-    web.vm.network :forwarded_port, host: 8001, guest: 8000
   end
 
   config.vm.define :web2 do |web|
     web.vm.network "192.168.1.13"
-    web.vm.network :forwarded_port, host: 8002, guest: 8000
   end
 
   config.vm.define :web3 do |web|
     web.vm.network "192.168.1.14"
-    web.vm.network :forwarded_port, host: 8003, guest: 8000
   end
 
   # The url from where the 'config.vm.box' box will be fetched if it
