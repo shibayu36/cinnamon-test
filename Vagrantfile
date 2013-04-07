@@ -11,15 +11,15 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
   config.vm.define :web1 do |web|
-    web.vm.network "192.168.1.20"
+    web.vm.network :private_network, ip: "192.168.1.20"
   end
 
   config.vm.define :web2 do |web|
-    web.vm.network "192.168.1.21"
+    web.vm.network :private_network, ip: "192.168.1.21"
   end
 
   config.vm.define :web3 do |web|
-    web.vm.network "192.168.1.22"
+    web.vm.network :private_network, ip: "192.168.1.22"
   end
 
   # The url from where the 'config.vm.box' box will be fetched if it
